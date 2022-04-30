@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="./scripts/fetchItem.js" defer></script>
+    <script src="./scripts/fetchProducts.js" defer></script>
+    <script src="./scripts/saveCartItems.js" defer></script>
+    <script src="./scripts/getSavedCartItems.js" defer></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container-header">
+        <div class="container-title">
+          <span class="title"><strong>trybe</strong>shopping</span>
+        </div>
+        <div class="container-search">
+          <input
+            id="search-product"
+            placeholder="Buscar..."
+            type="text"
+            class=""
+          />
+          <button class="button-search">
+            <span class="material-symbols-outlined"> search </span>
+          </button>
+        </div>
+        <div class="container-cart-quantity">
+          <p class="cart-quantity">0</p>
+          <i class="material-icons" style="font-size: 45px; color: white"
+            >shopping_cart</i
+          >
+        </div>
+      </div>
+      <div class="container-cartTitle">
+        <span class="cart__title">Meu Carrinho</span>
+      </div>
+    </header>
+    <section class="container">
+      <section class="container-loading-purchase">
+        <div class="loading-purchase">
+          <p>Finalizando Compra Aguarde...</p>
+          <img src="/img/loading-purchase.svg" />
+        </div>
+      </section>
+      <section class="items">
+        <div class="container-loading">
+          <p class="loading">carregando...</p>
+          <img src="/img/loading.svg" />
+        </div>
+      </section>
+      <section class="cart">
+        <ol class="cart__items"></ol>
+        <div class="container-cart">
+          <div class="valorTotal">
+            <span>Total:</span>
+            <span class="total-price">0</span>
+            <span class="total-price-visible">0</span>
+          </div>
+          <div class="buttons-cart">
+            <button class="finalize-purchase">
+              Finalizar Compra<span class="material-icons">
+                shopping_cart_checkout
+              </span>
+            </button>
+            <button class="empty-cart">
+              Esvaziar Carrinho<span class="material-icons">
+                remove_shopping_cart
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </section>
+    <footer class="footer">
+      Desenvolvido Por:&nbsp;<strong> Ederson Lucas</strong>
+    </footer>
+  </body>
+</html>
